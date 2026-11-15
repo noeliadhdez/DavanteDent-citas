@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DavanteDent - Gestión de citas</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+           <h1><img src="img-logo.png" alt="Logo de DavanteDent"></h1>
+            <p> Gestión de citas de pacientes</p>
+            
+        </header>
+        <main>
+            <h2>Nueva cita</h2>
+            <form id="formularioCitas" novalidate>
+                <div id="mensajesError"></div>
+               
+                <div class="campo">
+                    <label for="nombre">Nombre del paciente:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+
+                 <div class="campo">
+                     <label for="apellidos">Apellidos del paciente:</label>
+                     <input type="text" id="apellidos" name="apellidos">
+                </div>
+
+                <div class="campo">
+                     <label for="telefono">Teléfono del paciente:</label>
+                     <input type="tel" maxlength="9" id="telefono" name="telefono">
+                </div>
+
+                 <div class="campo">
+                     <label for="dni">DNI del paciente:</label>
+                    <input type="text" maxlength="9" id="dni" name="dni">
+                 </div>
+
+                <div class="campo">
+                     <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+              </div>
+
+                <div class="campo">
+                    <label for="fechaCita">Fecha de la cita:</label>
+                    <input type="date" id="fechaCita" name="fechaCita">
+                 </div>
+
+                 <div class="campo">
+                    <label for="horaCita">Hora de la cita:</label>
+                    <input type="time" id="horaCita" name="horaCita">
+                 </div>
+
+                 <div class="campo observaciones">
+                     <label for="observaciones">Observaciones:</label>
+                     <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+                 </div>
+
+    <button type="submit">Guardar cita</button>
+</form>
+               <section>
+    <h2>Citas registradas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Orden</th>
+                <th>Paciente</th>
+                <th>Teléfono</th>
+                <th>DNI</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Observaciones</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="listaCitas">
+            
+        </tbody>
+    </table>
+</section> 
+        </main>
+        <script src="app.js"></script>
+    </body>
+    <footer>
+        DavanteDent S.L.   |  Avenida José Laguillo, Sevilla |  davantedent@gmail.com  |  954636952
+    </footer>
+</html>
